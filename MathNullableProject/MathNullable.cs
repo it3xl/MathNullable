@@ -128,5 +128,34 @@ namespace MathNullableProject
 			return val.Value == 0;
 		}
 
+		/// <summary>
+		/// Will return the true, if the parameter is not the null and its value more or equal the zero.
+		/// </summary>
+		/// <param name="val"></param>
+		/// <returns></returns>
+		public static Boolean MoreOrEqualThero(this Double? val)
+		{
+			if (val.HasValue == false)
+			{
+				return false;
+			}
+
+			return 0 <= val.Value;
+		}
+
+		/// <summary>
+		/// Will return the true, if the parameter is not the null and its value more or equal the zero.
+		/// </summary>
+		/// <param name="val"></param>
+		/// <returns></returns>
+		public static Boolean MoreOrEqualThero(this Decimal? val)
+		{
+			if (val.HasValue == false)
+			{
+				return false;
+			}
+
+			return 0 <= val.Value;
+		}
 	}
 }
